@@ -7,7 +7,19 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			
+			colors: {
+				text: {
+					DEFAULT: 'rgb(163 163 163)',
+					lighter: '#fff',
+				},
+				background: {
+					DEFAULT: 'rgb(0 0 0)',
+					lighter: 'rgb(23 23 23)',
+				},
+				'header-gradient-color' : {
+					DEFAULT: '#065f46',
+				}
+			},
 		},
 	},
 	plugins: [],

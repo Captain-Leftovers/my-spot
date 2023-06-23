@@ -34,7 +34,7 @@ export default function Sidebar({ children }: Props) {
 
 	return (
 		<div className="flex h-full">
-			<div className="hidden md:flex flex-col gap-y-2 bg-black h-full w-[300px] p-2 ">
+			<div className="hidden md:flex flex-col gap-y-2 bg-background h-full w-[300px] p-2 ">
 				<Box>
 					<div className="flex flex-col gap-y-4 py-4 px-5">
 						{routes.map((item) => (
@@ -49,7 +49,7 @@ export default function Sidebar({ children }: Props) {
 					<Library />
 				</Box>
 			</div>
-			<main className="h-full flex-1 overflow-y-auto py-2 bg-yellow-400">
+			<main className="h-full flex-1 overflow-y-auto py-2">
 				{children}
 			</main>
 		</div>
