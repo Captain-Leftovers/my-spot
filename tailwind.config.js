@@ -18,7 +18,10 @@ module.exports = {
 				},
 				'header-gradient-color' : {
 					DEFAULT: '#065f46',
-				}
+				},
+				button:{
+					DEFAULT: 'rgb(34 197 94)',
+				},
 			},
 		},
 	},

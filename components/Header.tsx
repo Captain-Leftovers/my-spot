@@ -63,7 +63,9 @@ export default function Header({ children, className }: Props) {
 				<div className="flex justify-between items-center gap-x-4 ">
 					<>
 						<div>
-							<Button /> 
+							<Button >
+                                Sing up
+                                </Button> 
 						</div>
 					</>
 				</div>

@@ -23,7 +23,7 @@ export default function Library({}: Props) {
                 <AiOutlinePlus onClick={onClick} size={20} className='text-text cursor-pointer hover:text-text-lighter transition'/>
 			</div>
             <div className="flex flex-col gap-y-2 mt-4 px-3 ">
-              //TODO : display list of songs
+             [ //TODO : display list of songs]
             </div>
 		</div>
 	)
