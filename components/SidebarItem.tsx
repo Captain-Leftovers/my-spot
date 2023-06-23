@@ -18,7 +18,7 @@ export default function SidebarItem({
 		<Link
 			href={href}
 			className={twMerge(
-				' flex flex-row items-center w-full gap-x-4 h-auto text-md font-medium cursor-pointer hover:text-white transition text-neutral-400 py-1',
+				' flex flex-row items-center w-full gap-x-4 h-auto text-base font-medium cursor-pointer hover:text-white transition text-neutral-400 py-1',
 				active && 'text-white'
 			)}
 		>

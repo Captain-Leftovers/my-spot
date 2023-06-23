@@ -46,15 +46,14 @@ export default function Sidebar({ children }: Props) {
 					</div>
 				</Box>
 				<Box className="overflow-y-auto h-full">
-					<Library/>
+					<Library />
 				</Box>
 			</div>
-			<main className='h-full flex-1 overflow-y-auto py-2 bg-yellow-400' > {children}</main>
+			<main className="h-full flex-1 overflow-y-auto py-2 bg-yellow-400">
+				{children}
+			</main>
 		</div>
 	)
-
-
 }
-
 
 //TODO : remove yellow bg color
