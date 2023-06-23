@@ -11,6 +11,7 @@ module.exports = {
 				text: {
 					DEFAULT: 'rgb(163 163 163)',
 					lighter: '#fff',
+					btn: "rgb(212 212 212)",
 				},
 				background: {
 					DEFAULT: 'rgb(0 0 0)',
@@ -19,7 +20,7 @@ module.exports = {
 				'header-gradient-color' : {
 					DEFAULT: '#065f46',
 				},
-				button:{
+				primary:{
 					DEFAULT: 'rgb(34 197 94)',
 				},
 			},

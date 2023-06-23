@@ -63,13 +63,22 @@ export default function Header({ children, className }: Props) {
 				<div className="flex justify-between items-center gap-x-4 ">
 					<>
 						<div>
-							<Button >
-                                Sing up
-                                </Button> 
+							<Button className="bg-transparent text-text-btn font-medium" onClick={() => {}} >
+								Sing up
+							</Button>
+						</div>
+						<div>
+							<Button className="bg-text-lighter  px-6 py-2" onClick={()=>{}} >
+								Log in
+							</Button>
 						</div>
 					</>
 				</div>
 			</div>
+            {children}
 		</div>
 	)
 }
+
+
+//TODO : add onbClick to buttons sometime later
