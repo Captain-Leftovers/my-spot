@@ -1,11 +1,29 @@
+import * as RdxDialog from '@radix-ui/react-dialog'
+import { IoMdClose } from 'react-icons/io'
 
 
+type ModalProps = { 
+    isOpen: boolean
+    onChange: ( open: boolean) => void
+    title: string
+    description: string
+    children: React.ReactNode
+}
 
-const Modal = () => {
+const Modal = ( { isOpen, children, description, onChange, title } : ModalProps ) => {
+
+
+    
     return (
-        <div>
-            <h1>Modal Comp...</h1>
-        </div>
+        <RdxDialog.Root open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}  >
+
+            <RdxDialog.Portal>
+                <RdxDialog.Overlay className="bg-background-lighter/40 backdrop-blur-sm fixed inset-0" />
+            
+
+            </RdxDialog.Portal>
+
+        </RdxDialog.Root>
     )
 } 
 

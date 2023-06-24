@@ -3,11 +3,7 @@
 import Modal from '@/components/Modal'
 import { useEffect, useState } from 'react'
 
-type ModalProviderProps = {
-	children: React.ReactNode
-}
-
-const ModalProvider = ({ children }: ModalProviderProps) => {
+const ModalProvider = () => {
 	const [isMounted, setIsMounted] = useState(false)
 
 	useEffect(() => {
@@ -18,7 +14,14 @@ const ModalProvider = ({ children }: ModalProviderProps) => {
 
 	return (
 		<>
-			<Modal></Modal>
+			<Modal
+				title="testModal"
+				description="Test description"
+				isOpen={true}
+				onChange={() => {}}
+			>
+				test children here
+			</Modal>
 		</>
 	)
 }
