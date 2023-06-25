@@ -19,6 +19,9 @@ const Modal = ( { isOpen, children, description, onChange, title } : ModalProps 
 
             <RdxDialog.Portal>
                 <RdxDialog.Overlay className="bg-background-lighter/40 backdrop-blur-sm fixed inset-0" />
+                <RdxDialog.Content className='' >
+
+                </RdxDialog.Content>
             
 
             </RdxDialog.Portal>
