@@ -13,6 +13,7 @@ module.exports = {
 					lighter: '#fff',
 					btn: "rgb(212 212 212)",
 				},
+				
 				background: {
 					DEFAULT: 'rgb(0 0 0)',
 					lighter: 'rgb(23 23 23)',
