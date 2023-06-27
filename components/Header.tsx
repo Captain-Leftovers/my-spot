@@ -6,6 +6,7 @@ import { RxCaretLeft, RxCaretRight } from 'react-icons/rx'
 import { HiHome } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import Button from './Button'
+import useAuthModal from '@/hooks/useAuthModal'
 
 type Props = {
 	children: React.ReactNode
@@ -13,6 +14,7 @@ type Props = {
 }
 export default function Header({ children, className }: Props) {
 	const router = useRouter()
+	const authModal  = useAuthModal()
 
 	const handleLogout = () => {
 		//TODO : handle logout here
@@ -63,12 +65,12 @@ export default function Header({ children, className }: Props) {
 				<div className="flex justify-between items-center gap-x-4 ">
 					<>
 						<div>
-							<Button className="bg-transparent text-text-btn font-medium" onClick={() => {}} >
-								Sing up
+							<Button onClick = {authModal.onOpen} className="bg-transparent text-text-btn font-medium"  >
+								Sign up
 							</Button>
 						</div>
 						<div>
-							<Button className="bg-text-lighter  px-6 py-2" onClick={()=>{}} >
+							<Button onClick={authModal.onOpen} className="bg-text-lighter  px-6 py-2"  >
 								Log in
 							</Button>
 						</div>
