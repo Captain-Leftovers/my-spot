@@ -34,8 +34,8 @@ export default function SearchInput({}: SearchInputProps) {
      )
 
 	return (
-        <Input placeholder='what do you want to listen to ?' value={value} onChange={(e)=> setValue(e.target.value)} />
-
+        <Input placeholder='what do you want to listen to ?' value={value} onChange={(e)=> setValue(e.target.value)}  className='bg-opacity-60'/>
+        
         
     )
 }
