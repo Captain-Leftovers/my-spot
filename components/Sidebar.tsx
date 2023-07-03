@@ -12,7 +12,7 @@ import { Song } from '@/types'
 
 type Props = {
 	children: React.ReactNode
-	songs: Song[],
+	songs: Song[]
 }
 export default function Sidebar({ children, songs }: Props) {
 	const pathname = usePathname()
@@ -40,10 +40,7 @@ export default function Sidebar({ children, songs }: Props) {
 				<Box>
 					<div className="flex flex-col gap-y-4 py-4 px-5">
 						{routes.map((item) => (
-							<SidebarItem
-								key={item.label}
-								{...item}
-							/>
+							<SidebarItem key={item.label} {...item} />
 						))}
 					</div>
 				</Box>
