@@ -9,7 +9,6 @@ export type Song = {
 	image_path: string
 }
 
-
 export type UserDetails = {
 	id: string
 	first_name: string
@@ -44,7 +43,7 @@ export type Price = {
 	product_id?: string
 	active?: boolean
 	description?: string
-	unti_amount?: number
+	unit_amount?: number
 	currency?: string
 	type?: Stripe.Price.Type
 	interval?: Stripe.Price.Recurring.Interval
