@@ -59,5 +59,5 @@ export type Product = {
 	name?: string
 	description?: string
 	metadata?: Stripe.Metadata
-	images?: string
+	image?: string
 }
