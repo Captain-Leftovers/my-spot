@@ -61,3 +61,7 @@ export type Product = {
 	metadata?: Stripe.Metadata
 	image?: string
 }
+
+export type ProductWithPrice = {
+	prices?: Price[]
+} & Product
