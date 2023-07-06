@@ -1,6 +1,7 @@
 'use client'
 
 import useLoadImage from '@/hooks/useLoadImage'
+import usePlayer from '@/hooks/usePlayer'
 import { Song } from '@/types'
 import Image from 'next/image'
 
@@ -10,13 +11,13 @@ type MediaItemProps = {
 }
 export default function MediaItem({ data, onClick }: MediaItemProps) {
 	const imageUrl = useLoadImage(data)
-
+	const player = usePlayer()
 	const handleClick = () => {
 		if (onClick) {
 			return onClick(data.id)
 		}
 
-
+	 return	player.setId(data.id)
 	}
 
 	return (
@@ -32,14 +33,12 @@ export default function MediaItem({ data, onClick }: MediaItemProps) {
 					className="object-cover"
 				/>
 			</div>
-            <div className='flex flex-col gap-y-1 overflow-hidden'>
-                <p className='text-white truncate'>
-                    {data.title}
-                </p>
-                <p className='text-neutral-400 text-sm truncate'>
-                    {data.author}
-                </p>
-            </div>
+			<div className="flex flex-col gap-y-1 overflow-hidden">
+				<p className="text-white truncate">{data.title}</p>
+				<p className="text-neutral-400 text-sm truncate">
+					{data.author}
+				</p>
+			</div>
 		</div>
 	)
 }
