@@ -11,11 +11,11 @@ import usePlayer from '@/hooks/usePlayer'
 import { useEffect, useState } from 'react'
 import useSound from 'use-sound'
 
-type playerContentProps = {
+type PlayerContentProps = {
 	song: Song
 	songUrl: string
 }
-export default function playerContent({ song, songUrl }: playerContentProps) {
+export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
 	const player = usePlayer()
 	const [volume, setVolume] = useState(1)
 	const [isPlaying, setIsPlaying] = useState(false)
