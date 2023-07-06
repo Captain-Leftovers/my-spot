@@ -11,12 +11,14 @@ import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useUser } from '@/hooks/useUser'
 import { FaUserAlt } from 'react-icons/fa'
 import { toast } from 'react-hot-toast'
+import usePlayer from '@/hooks/usePlayer'
 
 type Props = {
 	children: React.ReactNode
 	className?: string
 }
 export default function Header({ children, className }: Props) {
+	const player = usePlayer()
 	const router = useRouter()
 	const authModal = useAuthModal()
 	const supabaseClient = useSupabaseClient()
@@ -25,7 +27,7 @@ export default function Header({ children, className }: Props) {
 	const handleLogout = async () => {
 		const { error } = await supabaseClient.auth.signOut()
 
-		//TODO : reset playing songs when implemented
+		player.reset()
 		router.refresh()
 
 		if (error) {
