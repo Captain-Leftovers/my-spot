@@ -15,7 +15,7 @@ export const getURL = () => {
 
 
 
-export const postData = async (url: string, data?: {price:Price}) => {
+export const postData = async ({url, data}:{url: string, data?: {price:Price}}) => {
 
     console.log('postData', url, data)
 

@@ -48,11 +48,11 @@ export default function SubscribeModal({ products }: SubscribeModalProps) {
 		}
 
 		try {
-			const { sessionId } = await postData(
+			const { sessionId } = await postData({
 			
-				'/api/create-checkout-session',
-				{ price }
-			)
+				url:'/api/create-checkout-session',
+				data:{ price }
+			})
 
 			const stripe = await getStripe()
 			stripe?.redirectToCheckout({ sessionId })

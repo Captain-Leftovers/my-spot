@@ -6,7 +6,6 @@ import { useUser } from '@/hooks/useUser'
 import { postData } from '@/libs/helpers'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { set } from 'react-hook-form'
 import { toast } from 'react-hot-toast'
 
 type AccountContentProps = {}
@@ -28,7 +27,7 @@ export default function AccountContent({}: AccountContentProps) {
 		setLoading(true)
 
 		try {
-			const { url, error } = await postData('/api/create-portal-link')
+			const { url, error } = await postData({url:'/api/create-portal-link'})
 
 			window.location.assign(url)
 		} catch (error) {
