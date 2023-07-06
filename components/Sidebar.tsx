@@ -59,4 +59,4 @@ export default function Sidebar({ children, songs }: Props) {
 	)
 }
 
-//TODO : remove yellow bg color
+

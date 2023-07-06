@@ -16,7 +16,7 @@ export default function MediaItem({ data, onClick }: MediaItemProps) {
 			return onClick(data.id)
 		}
 
-		//TODO : default turn on player
+
 	}
 
 	return (

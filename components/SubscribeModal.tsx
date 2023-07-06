@@ -49,7 +49,7 @@ export default function SubscribeModal({ products }: SubscribeModalProps) {
 
 		try {
 			const { sessionId } = await postData(
-				//TODO check if correct
+			
 				'/api/create-checkout-session',
 				{ price }
 			)

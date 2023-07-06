@@ -13,7 +13,7 @@ export default function ListItem({ image, name, href }: Props) {
 	const router = useRouter()
 
 	const onClick = () => {
-		//TODO : add authentication before push
+		
 		router.push(href)
 	}
 	return (

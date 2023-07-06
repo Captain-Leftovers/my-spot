@@ -132,4 +132,4 @@ export default function Header({ children, className }: Props) {
 	)
 }
 
-//TODO : add onbClick to buttons sometime later
+
