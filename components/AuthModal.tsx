@@ -19,30 +19,29 @@ export default function AuthModal() {
 	const { session } = useSessionContext()
 	const { onClose, isOpen } = useAuthModal()
 
-    useEffect(() => {
-        if(session){
-            router.refresh()
-            onClose()
+	useEffect(() => {
+		if (session) {
+			router.refresh()
+			onClose()
+		}
+	}, [session, router, onClose])
 
-        }
-    }, [session, router, onClose])
-
-    const onChange = (open:boolean ) => {
-        if(!open){
-            onClose()
-        }
-    }
+	const onChange = (open: boolean) => {
+		if (!open) {
+			onClose()
+		}
+	}
 
 	return (
 		<Modal
 			title="Welcome Back"
 			description="Login to your account"
-			isOpen = {isOpen}
+			isOpen={isOpen}
 			onChange={onChange}
 		>
 			<Auth
 				theme="dark"
-				providers={['google', 'github', 'discord']}
+				providers={['github', 'discord']}
 				magicLink
 				supabaseClient={supabaseClient}
 				appearance={{
@@ -51,8 +50,7 @@ export default function AuthModal() {
 						default: {
 							colors: {
 								brand: '#404040',
-								brandAccent:'#7c3aed',
-								
+								brandAccent: '#7c3aed',
 							},
 						},
 					},
