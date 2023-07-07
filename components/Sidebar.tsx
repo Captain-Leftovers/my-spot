@@ -20,7 +20,6 @@ export default function Sidebar({ children, songs }: Props) {
 	const pathname = usePathname()
 	const player = usePlayer()
 
-
 	const routes = useMemo(() => {
 		return [
 			{
@@ -39,7 +38,12 @@ export default function Sidebar({ children, songs }: Props) {
 	}, [pathname])
 
 	return (
-		<div className={twMerge('flex h-full', player.activeId && 'h-[calc(100%-80px)]')}>
+		<div
+			className={twMerge(
+				'flex h-full',
+				player.activeId && 'h-[calc(100%-80px)]'
+			)}
+		>
 			<div className="hidden md:flex flex-col gap-y-2 bg-background h-full w-[300px] p-2 ">
 				<Box>
 					<div className="flex flex-col gap-y-4 py-4 px-5">
@@ -58,5 +62,3 @@ export default function Sidebar({ children, songs }: Props) {
 		</div>
 	)
 }
-
-
