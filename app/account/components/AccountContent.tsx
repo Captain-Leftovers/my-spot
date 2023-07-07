@@ -61,7 +61,7 @@ export default function AccountContent({}: AccountContentProps) {
 					</p>
 
 					<Button
-						className="w-[300px]"
+						className="w-[300px] bg-emerald-500"
 						disabled={loading || isLoading}
 						onClick={redirectToCustomerPortal}
 					>

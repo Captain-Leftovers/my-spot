@@ -10,7 +10,7 @@ export default async function Home() {
 
 	return (
 		<div className=" bg-background-lighter rounded-lg h-full w-full overflow-hidden overflow-y-auto">
-			<Header>
+			<Header className='from-violet-700' >
 				<div className="mb-2">
 					<h1 className="text-text-lighter text-3xl font-semibold">
 						Welcome Back

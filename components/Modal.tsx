@@ -30,7 +30,7 @@ const Modal = ( { isOpen, children, description, onChange, title } : ModalProps 
                         {children}
                     </div>
                     <RdxDialog.Close asChild >
-                        <button className='text-text hover:text-text-lighter absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justcenter rounded-full focus:outline-none'>
+                        <button className= ' text-text hover:text-text-lighter absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justcenter rounded-full focus:outline-none'>
                             <IoMdClose />
                         </button>
                     </RdxDialog.Close>

@@ -38,7 +38,7 @@ export default function AuthModal() {
 			title="Welcome Back"
 			description="Login to your account"
 			isOpen = {isOpen}
-			onChange={() => {}}
+			onChange={onChange}
 		>
 			<Auth
 				theme="dark"
@@ -51,8 +51,8 @@ export default function AuthModal() {
 						default: {
 							colors: {
 								brand: '#404040',
-								brandAccent:
-									'#22c55e',
+								brandAccent:'#7c3aed',
+								
 							},
 						},
 					},
