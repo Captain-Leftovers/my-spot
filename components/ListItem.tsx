@@ -1,7 +1,8 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import { FaPlay } from 'react-icons/fa'
-
+import useAuthModal from '@/hooks/useAuthModal'
+import { useUser } from '@/hooks/useUser'
 import Image from 'next/image'
 
 type Props = {
@@ -12,8 +13,14 @@ type Props = {
 export default function ListItem({ image, name, href }: Props) {
 	const router = useRouter()
 
+	const { user } = useUser()
+	const authModal = useAuthModal()
+
 	const onClick = () => {
-		
+		if (!user) {
+			return authModal.onOpen()
+		}
+
 		router.push(href)
 	}
 	return (

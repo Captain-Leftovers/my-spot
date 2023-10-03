@@ -54,15 +54,17 @@ export default function LikeButton({ songId }: LikeButtonProps) {
 				.eq('song_id', songId)
 
 			if (error) {
+				
 				toast.error(error.message)
 			} else {
 				setIsLiked(false)
 			}
-		} else {
+		} else {	
+			
 			const { error } = await supabaseClient
 				.from('liked_songs')
 				.insert({ song_id: songId, user_id: user.id })
-
+				
                 if (error) {
                     toast.error(error.message)
                 } else {

@@ -1,7 +1,6 @@
 import type { Song } from '@/types'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import { toast } from 'react-hot-toast'
 
 const getLikedSongs = async (): Promise<Song[]> => {
 	const supabase = createServerComponentClient({
